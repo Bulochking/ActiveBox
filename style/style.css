@@ -23,33 +23,36 @@
 }
 .banner .header {
   position: absolute;
+  left: 0;
   top: 0;
-  padding: 38px 0 36px;
+  z-index: 1;
+  border-bottom: 1px solid #BABBC5;
 }
-.banner .header .container {
-  margin: 0 auto;
+.banner .header__container {
+  padding: 0px 16px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+.banner .container {
   max-width: 1202px;
   padding: 0px 16px;
-  position: relative;
+  margin: 0 auto;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  -moz-column-gap: 351px;
-       column-gap: 351px;
-  align-items: center;
 }
-.banner .header .container .logo {
+.banner .logo {
   display: flex;
 }
-.banner .header .container .nav__items {
+.banner .nav__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   -moz-column-gap: 75px;
        column-gap: 75px;
   align-items: center;
   list-style-type: none;
 }
-.banner .header .container .nav__items__item-wrapper__item__link {
+.banner .nav__link {
+  padding: 43px 0 42px;
   color: #fff;
   text-decoration: none;
   font-family: "Open Sans", serif;
@@ -58,21 +61,14 @@
   line-height: 19px;
   text-transform: uppercase;
 }
-.banner .header .container .nav__items__item-wrapper__item__link:hover {
+.banner .nav__link__link:hover {
   border-bottom: 3px solid #BABBC5;
 }
-.banner .header .container .nav__items__item-wrapper__item__link:active {
+.banner .nav__link__link:active {
   color: #E71414;
   border-color: #E71414;
 }
-.banner .container {
-  margin: 0 auto;
-  max-width: 1202px;
-  padding: 0px 16px;
-  position: relative;
-  z-index: 1;
-}
-.banner .container__title {
+.banner__title {
   font-weight: 900;
   color: #fff;
   margin-bottom: 32px;
@@ -80,14 +76,14 @@
   line-height: 75px;
   text-transform: uppercase;
 }
-.banner .container__text {
+.banner__text {
   font-weight: 400;
   color: #fff;
   margin-bottom: 80px;
   font-size: 24px;
   line-height: 28px;
 }
-.banner .container .btn {
+.banner .btn {
   border: none;
   background-color: #FF4343;
   color: #fff;
@@ -100,9 +96,9 @@
   padding: 25px 10px;
   margin-top: 84px;
 }
-.banner .container__btn:hover {
+.banner .btn__btn:hover {
   background-color: #E71414;
 }
-.banner .container__btn:active {
+.banner .btn__btn:active {
   box-shadow: 4px 4px 30px #FF4343;
 }/*# sourceMappingURL=style.css.map */
