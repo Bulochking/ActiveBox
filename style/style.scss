@@ -5,6 +5,15 @@
 	font-family: "Raleway", serif;
 }
 
+@mixin font($font-size, $font-weight, $line-height, $color){
+	font-size: $font-size;
+	line-height: $line-height;
+	font-weight: $font-weight;
+	color: $color;
+}
+
+// -------------------------------------------
+
 .header{
 	position: absolute;
 	left: 0;
@@ -25,6 +34,7 @@
 	position: relative;
 	background: url(../media/ActiveBox-banner-img.png) center/cover no-repeat;
 	text-align: center;
+	margin-bottom: 109px;
 
 	&::after{
 		content: '';
@@ -38,20 +48,13 @@
 	}
 
 	&__title{
-		font-weight: 900;
-		color: #fff;
-		margin-bottom: 32px;
-		font-size: 64px;
-		line-height: 75px;
+		@include font(64px, 900, 75px, #fff);
 		text-transform: uppercase;	
 	}
 
 	&__text{
-		font-weight: 400;
-		color: #fff;
+		@include font(24px, 400, 28px, #fff);
 		margin-bottom: 82px;
-		font-size: 24px;
-		line-height: 28px;
 		max-width: 999px;
 		margin: 0 auto 82px;
 	}
@@ -84,13 +87,10 @@
 	}
 						
 	&__link{
+		@include font(14px, 600, 19px, #fff);
 		padding: 26px 0 28px;
-		color: #fff;
 		text-decoration: none;
 		font-family: "Open Sans", serif;
-		font-weight: 600;
-		font-size: 14px;
-		line-height: 19px;
 		text-transform: uppercase;
 		display: block;
 		border-bottom: 3px solid transparent;
@@ -107,13 +107,10 @@
 }
 
 .btn{
+	@include font(24px, 900, 28px, #fff);
 	border: none;
 	background-color: #FF4343;
-	color: #fff;
 	font-family: "Open Sans", serif;
-	font-size: 24px;
-	line-height: 28px;
-	font-weight: 900;
 	max-width: 370px;
 	width: 100%;
 	padding: 25px 10px;
@@ -122,7 +119,108 @@
 	&:hover{
 		background-color: #E71414;	
 	}
+
 	&:active{
 		box-shadow: 4px 4px 30px #FF4343;
 	}
 }
+
+// -------------------------------------------
+
+.about{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 89px 32px;
+	margin-bottom: 116px;
+
+	&__wrapper{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+		// можно ли текст-алайн??
+	}
+
+	&__icon-wrapper{
+		width: 100px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+
+	&__title{
+		@include font(24px, 900, 28px, #2D3033);
+		text-transform: uppercase;
+		margin-bottom: 42px;
+	}
+
+	&__text{
+		@include font(18px, 400, 21px, #6C7279);
+	}
+}
+
+.icon{
+
+}
+
+// -------------------------------------------
+
+.design{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+
+	&__wrapper{
+		position: relative;
+		padding-top: 100%;
+	}
+
+	&__image{
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	&__content{
+		opacity: 0;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(255, 67, 67, 0.8);
+		border: 2px solid #FFFFFF;
+		flex-direction: column;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+
+		&:hover{
+			opacity: 1;
+			display: flex;
+		}
+		&:active{
+			opacity: 1;
+			display: flex;
+			background: rgba(185, 12, 12, 0.8);
+		}
+	}
+
+	&__title{
+		@include font(24px, 900, 28px, #fff);
+		margin-bottom: 47px;
+		text-transform: uppercase;
+	}
+
+	&__text{
+		@include font(18px, 400, 21px, #fff);
+	}
+}
+
+// -------------------------------------------
