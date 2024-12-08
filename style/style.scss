@@ -234,24 +234,26 @@
 // -------------------------------------------
 
 .rewiews{
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 30px;
 	margin-bottom: 114px;
 
-	&__wrapper{
-		max-width: 270px;
-		margin: 0 auto;
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
+	&__container{
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 30px;
 	}
 
 	&__wrapper-image{
-		object-fit: cover;
+		padding-top: 100%;
+		position: relative;
+		margin-bottom: 30px;
+	}
+
+	&__image{
+		position: absolute;
+		left: 0;
+		top: 0;
 		width: 100%;
 		height: 100%;
-		margin-bottom: 30px;
 	}
 
 	&__title{
