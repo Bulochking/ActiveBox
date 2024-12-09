@@ -297,3 +297,62 @@
 	}
 
 }
+
+// ---------------------------------
+
+.slider{
+
+	&__container{
+		display: grid;
+		grid-template-columns: repeat(2 1fr);
+	}
+
+	&__img{
+
+	}
+
+	&__wrapper-text{
+
+	}
+
+	&__title{
+
+	}
+
+	&__text{
+
+	}
+}
+
+.swiper{
+	width: 600px;
+	height: 300px;
+}
+
+.swiper-rewiew{
+
+}
+
+.swiper-wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	display: flex;
+	transition-property: transform;
+	box-sizing: content-box;
+}
+
+.swipper-slide{
+	flex-shrink: 0;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition-property: transform;
+	display: block;
+}
+
+.swiper-pagination{
+	
+}
+

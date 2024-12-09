@@ -276,4 +276,32 @@
 .rewiews__icon-wrapper:hover {
   background-color: #FF4343;
   border-color: #FF4343;
+}
+
+.slider__container {
+  display: grid;
+  grid-template-columns: repeat(2 1fr);
+}
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+}
+
+.swipper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
 }/*# sourceMappingURL=style.css.map */
