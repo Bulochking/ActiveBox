@@ -173,7 +173,41 @@
 	
 	}
 
+@media only screen and (max-width: 767px){
+	.header{
+	
+		&__container{
+			border-bottom: none;
+		}
+	}
 
+	.banner{
+		padding: 50px 0 52px;
+		margin-bottom: 40px;
+	
+		&__title{
+			@include font(36px, 900, 45px, #fff);
+			margin-bottom: 33px;
+		}
+	
+		&__text{
+			@include font(14px, 400, 16px, #fff);
+			margin: 0 auto 49px;
+		}
+	}
+
+	.container{
+		max-width: 312px;
+	}
+
+	.nav{
+		display: none;
+	}
+
+	.btn{
+		padding: 15px 10px;
+	}	
+}
 
 // -------------------------------------------
 
@@ -238,6 +272,33 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 767px){
+	.about{
+		margin-bottom: 35px;
+	
+		.container{
+			grid-template-columns: repeat(1, 1fr);
+			gap: 42px;
+		}
+	
+		&__icon-wrapper{
+			width: 76px;
+			height: 76px;
+			margin: 0 auto 21px;
+		}
+	
+		&__title{
+			@include font(18px, 900, 21px, #2D3033);
+			margin-bottom: 9px;
+		}
+	
+		&__text{
+			@include font(14px, 400, 16px, #6C7279);
+		}
+	}
+}
+
 
 // -------------------------------------------
 
@@ -329,6 +390,22 @@
 	}
 }
 
+@media only screen and (max-width: 767px){
+	.design{
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 35px;
+	
+		&__title{
+			@include font(18px, 900, 21px, #fff);
+			margin-bottom: 2px;
+		}
+	
+		&__text{
+			@include font(14px, 400, 16px, #fff);
+		}
+	}
+}
+
 // -------------------------------------------
 
 .rewiews{
@@ -368,7 +445,6 @@
 		margin-bottom: 18px;
 		text-transform: uppercase;
 	}
-
 }
 
 @keyframes text-pop-top {
@@ -448,6 +524,40 @@
 	}
 }
 
+@media only screen and (max-width: 767px){
+	.rewiews{
+		margin-bottom: 41px;
+	
+		.container{
+			grid-template-columns: repeat(1, 1fr);
+			gap: 49px;
+		}
+	
+		&__wrapper-image{
+			margin-bottom: 25px;
+		}
+	
+		&__title{
+			@include font(18px, 700, 21px, #000);
+		}
+	
+		&__description{
+			@include font(14px, 400, 16px, #FF4343);
+			margin-bottom: 37px;
+		}
+	}
+
+	.icons-wrapper{
+		margin-top: 57px;
+		column-gap: 5px;
+	}
+	
+	.icon-wrapper{
+		width: 40px;
+		height: 40px;
+	}
+}
+
 // ---------------------------------
 
 .slider{
@@ -455,7 +565,7 @@
 
 	&__container{
 		display: grid;
-		grid-template-columns: 47% 53%;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	&__wrapper-img{
@@ -553,6 +663,49 @@
 	}
 }
 
+@media only screen and (max-width: 767px){
+	.slider{
+		margin-bottom: 35px;
+		
+	
+		&__container{
+			grid-template-columns: repeat(1, 1fr);
+			
+		}
+	
+		&__wrapper-img{
+			position: relative;
+			overflow: hidden;
+			padding-top: 60%;
+			width: 100%;
+		}
+	
+		&__wrapper-text{
+			padding: 23px 25px 101px 20px;
+			display: flex;
+			flex-direction: column; 
+			justify-content: center;
+			align-items: center; 
+			// паддинг убрать нижний + без флекса не получилось центрировать
+			text-align: center;
+		}
+	
+		&__title{
+			@include font(24px, 400, 32px, #FFFFFF);
+			margin-bottom: 23px;
+		}
+	
+		&__text{
+			@include font(12px, 700, 14px, #FFFFFF);
+		}
+	}
+
+	.swiper-pagination-bullet{
+		width: 9px;
+		height: 9px;
+	}
+}
+
 // ---------------------------------------------
 
 .download{
@@ -588,6 +741,21 @@
 	.download__text{
 		@include font(14px, 700, 16px, #000);
 		margin: 0 auto 43px;
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.download{
+		margin-bottom: 45px
+	}
+	
+	.download__title{
+		@include font(18px, 500, 21px, #000);
+	}
+	
+	.download__text{
+		@include font(13px, 700, 15px, #000);
+		margin: 0 auto 11px;
 	}
 }
 
@@ -681,6 +849,39 @@
 
 		&__span{
 			@include font(14px, 400, 16px, #fff);
+		}
+	}
+}
+
+@media only screen and (max-width: 767px){
+	.footer{
+		padding: 71px 32px;
+	
+		.container{
+			grid-template-columns: repeat(1, 1fr);
+			gap: 60px;
+			margin-bottom: 33px;
+		}
+
+		&__title{
+			@include font(14px, 700, 16px, #fff);
+			margin-bottom: 34px;
+		}
+	
+		&__text{
+			@include font(14px, 400, 16px, #fff);
+		}
+	
+		.icons-wrapper{
+			column-gap: 17px;
+		}
+	}
+	
+	.footer-secondary{
+		padding: 29px 20px;
+
+		&__span{
+			@include font(14px, 400, px, #fff);
 		}
 	}
 }
