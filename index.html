@@ -45,6 +45,11 @@
 							<li class="nav__item"><a class="nav__link" href="https://t.me/natixlabs">download</a></li>					
 					</ul>
 				</nav>
+				<button class="header__open-menu">
+					<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z" fill="white"/>
+						</svg>						
+				</button>
 			</div>
 		</header>
 		<div class="container">
@@ -325,7 +330,7 @@
 				</div>
 				<div class="swiper-slide slider__container">
 					<div class="slider__wrapper-img">
-						<img class="slider__img" src="/media/img-slider-4.jpg.jpg" alt="#">
+						<img class="slider__img" src="/media/img-slider-4.jpg" alt="#">
 					</div>
 					<div class="slider__wrapper-text">
 						<h3 class="slider__title">“Slide 2(3)...”</h3>
@@ -334,7 +339,7 @@
 				</div>
 				<div class="swiper-slide slider__container">
 					<div class="slider__wrapper-img">
-						<img class="slider__img" src="/media/img-3-slide.jpg.jpg" alt="#">
+						<img class="slider__img" src="/media/img-3-slide.jpg" alt="#">
 					</div>
 					<div class="slider__wrapper-text">
 						<h3 class="slider__title">“????????????????????????????????????????”</h3>
@@ -357,24 +362,24 @@
 
 	<!-- ------------------------------------------- -->
 
-	<div class="download">
+	<section class="download">
 		<div class="container">
 			<h2 class="download__title">Are You Ready to Start? Download Now For Free!</h2>
 			<p class="download__text">Fusce dapibus, tellus ac cursus commodo</p>
 			<button class="btn">Download here</button>
 		</div>
-	</div>
+	</section>
 
 	<!-- ------------------------------------------- -->
 
 	<footer class="footer">
 		<div class="container">
-			<div class="footer__location">
+			<div class="footer__box">
 				<h3 class="footer__title">Location</h3>
 				<p class="footer__text">3481 Melrose Place
 					Beverly Hills, CA 90210</p>
 			</div>
-			<div class="footer__contacts">
+			<div class="footer__box">
 				<h3 class="footer__title">Share with Love</h3>
 				<div class="icons-wrapper">
 					<a class="icon-wrapper" href="https://www.behance.net/alexpodstreha">
@@ -394,18 +399,22 @@
 						</a>
 				</div>
 			</div>
-			<div class="footer__about">
+			<div class="footer__box">
 				<h3 class="footer__title">About ActiveBox</h3>
 				<p class="footer__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec ullamcorper nulla non metus auctor fringilla.	</p>
 			</div>
 		</div>
-		<footer class="footer-secondary">
-			<p class="footer-secondary__text">Copyright © 2015 ActiveBox. All Rights Reserved
-				Made with <span class="footer-secondary__span">by Kamal Chaneman</span></p>
-		</footer>
+		<div class="footer-secondary">
+			<div class="footer-secondary__container">
+				<p class="footer-secondary__text">Copyright © 2015 ActiveBox. All Rights Reserved
+					Made with <span class="footer-secondary__span">by Kamal Chaneman</span></p>
+			</div>
+		</div>
 	</footer>
 
 	<!-- ---------------------------------------------- -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		const swiper = new Swiper('.swiper', {
 				loop: true,
@@ -416,6 +425,6 @@
 				},	
 			});
 	</script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 </body>
 </html>

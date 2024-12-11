@@ -14,6 +14,50 @@
 
 // -------------------------------------------
 
+.container{
+	max-width: 1202px;
+	padding: 0 16px;
+	margin: 0 auto;
+}
+
+.icon{
+}
+
+.text{
+	@include font(18px, 400, 21px, #6C7279);
+}
+
+.icons-wrapper{
+	display: flex;
+	align-items: center;
+	margin-top: 38px;
+	column-gap: 5px;
+}
+
+.icon-wrapper{
+	width: 39px;
+	height: 39px;
+	border: 1px solid #C6CBCD;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all .2s linear;
+
+	&:hover path{
+		fill: #fff;
+	}
+	&:hover{
+		background-color: #FF4343;
+		border-color: #FF4343;
+		animation: text-pop-top 0.6s both;
+		
+	}
+	&:active{
+		background-color: #B90C0C;
+		border-color: #B90C0C;
+	}
+}	
+
 .header{
 	position: absolute;
 	left: 0;
@@ -27,7 +71,27 @@
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid #BABBC5;
+
+		@media only screen and (max-width: 767px){
+			border-bottom: none;
+			padding: 21px;
+		}
+	}
+
+	
+	&__open-menu{
+		display: none;
 		
+		@media only screen and (max-width: 767px){
+			display: block;
+			width: 55px;
+			height: 55px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+		}
 	}
 }
 
@@ -37,6 +101,11 @@
 	background: url(../media/ActiveBox-banner-img.png) center/cover no-repeat;
 	text-align: center;
 	margin-bottom: 109px;
+
+	@media only screen and (max-width: 1024px){
+		padding: 257px 0 126px;
+		margin-bottom: 78px;
+	}
 
 	.container{
 		z-index: 1;
@@ -58,19 +127,25 @@
 		@include font(64px, 900, 75px, #fff);
 		text-transform: uppercase;	
 		margin-bottom: 32px;
+
+		@media only screen and (max-width: 1024px){
+			@include font(48px, 900, 56px, #fff);
+			text-transform: uppercase;	
+			margin-bottom: 62px;
+		}
 	}
 
 	&__text{
 		@include font(24px, 400, 28px, #fff);
 		max-width: 999px;
 		margin: 0 auto 82px;
-	}
-}
 
-.container{
-	max-width: 1202px;
-	padding: 0 16px;
-	margin: 0 auto;
+		@media only screen and (max-width: 1024px){
+			@include font(18px, 400, 21px, #fff);
+			max-width: 749px;
+			margin: 0 auto 90px;
+		}
+	}
 }
 
 .logo{
@@ -81,13 +156,14 @@
 	&:active path{
 		fill: #E71414;
 	}
-	// вопрос, если я хочу добавить
-	// ховер и эктив только для слово ACTIVE в логотипе и норм ли использовать path
+
+	@media only screen and (max-width: 767px){
+			max-width: 103px;
+	}
 }
 
 .nav{
 
-	
 	&__items{
 		display: flex;
 		justify-content: center;
@@ -97,6 +173,10 @@
 
 	&__item{
 		min-width: 134px;
+
+		@media only screen and (max-width: 1024px){
+			min-width: 112px;
+		}
 	}
 						
 	&__link{
@@ -115,6 +195,10 @@
 		&:active{
 			color: #E71414;
 			border-color: #E71414;
+		}
+
+		@media only screen and (max-width: 1024px){
+			@include font(12px, 700, 14px, #fff);
 		}
 	}
 }
@@ -140,54 +224,10 @@
 	}
 }
 
-@media only screen and (max-width: 1024px){
-	.banner{
-		padding: 257px 0 126px;
-		margin-bottom: 78px;
-	
-		&__title{
-			@include font(48px, 900, 56px, #fff);
-			text-transform: uppercase;	
-			margin-bottom: 62px;
-		}
-	
-		&__text{
-			@include font(18px, 400, 21px, #fff);
-			max-width: 749px;
-			margin: 0 auto 90px;
-		}
-	}
-
-	.container{
-		max-width: 1016px;
-	}
-
-	.nav{		
-			&__item{
-				min-width: 112px;
-			}
-								
-			&__link{
-				@include font(12px, 700, 14px, #fff);
-			}
-		}
-
-		.btn{
-			max-width: 313px;
-		}
-	
-	}
-
 @media only screen and (max-width: 767px){
-	.header{
-	
-		&__container{
-			border-bottom: none;
-		}
-	}
 
 	.banner{
-		padding: 50px 0 52px;
+		padding: 106px 0 52px;
 		margin-bottom: 40px;
 	
 		&__title{
@@ -201,16 +241,13 @@
 		}
 	}
 
-	.container{
-		max-width: 312px;
-	}
-
 	.nav{
 		display: none;
 	}
 
 	.btn{
 		padding: 15px 10px;
+		max-width: 100%;
 	}	
 }
 
@@ -247,10 +284,6 @@
 	&__text{
 		@include font(18px, 400, 21px, #6C7279);
 	}
-}
-
-.icon{
-
 }
 
 @media only screen and (max-width: 1024px){
@@ -376,10 +409,6 @@
 	}
 }
 
-.text{
-	@include font(18px, 400, 21px, #6C7279);
-}
-
 @media only screen and (max-width: 1024px){
 	.design{
 		margin-bottom: 78px;
@@ -461,36 +490,6 @@
 	}
 }
 
-.icons-wrapper{
-	display: flex;
-	align-items: center;
-	margin-top: 38px;
-	column-gap: 5px;
-}
-
-.icon-wrapper{
-	width: 39px;
-	height: 39px;
-	border: 1px solid #C6CBCD;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all .2s linear;
-
-	&:hover path{
-		fill: #fff;
-	}
-	&:hover{
-		background-color: #FF4343;
-		border-color: #FF4343;
-		animation: text-pop-top 0.6s both;
-		
-	}
-	&:active{
-		background-color: #B90C0C;
-		border-color: #B90C0C;
-	}
-}	
 
 @media only screen and (max-width: 1024px){
 	.rewiews{
@@ -585,6 +584,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+		object-fit: cover;
 	}
 
 	&__wrapper-text{
@@ -613,6 +613,14 @@
 
 .swiper{
 	padding-bottom: 45px;
+
+	@media only screen and (max-width: 767px){
+		padding-bottom: 32px;
+	}
+
+	@media only screen and (max-width: 1024px){
+		padding-bottom: 32px;
+	}
 }
 
 .swiper-pagination{
@@ -634,14 +642,14 @@
 	background-color: #7E5D6F;
 }
 
-// .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
-// 	bottom: 0;
-// }
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+	margin: 0;
+}
 
-// .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .
-// .swiper-pagination-bullet{
-// 	bottom: 0;
-// }
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets
+.swiper-pagination-bullet{
+	margin: 0;
+}
 
 @media only screen and (max-width: 1024px){
 	.slider{
@@ -675,33 +683,24 @@
 	
 		&__container{
 			grid-template-columns: repeat(1, 1fr);
-			
-		}
-	
-		&__wrapper-img{
-			position: relative;
-			overflow: hidden;
-			padding-top: 60%;
-			width: 100%;
 		}
 	
 		&__wrapper-text{
 			padding: 23px 25px 101px 20px;
 			display: flex;
 			flex-direction: column; 
-			justify-content: center;
-			align-items: center; 
-			// паддинг убрать нижний + без флекса не получилось центрировать
 			text-align: center;
 		}
 	
 		&__title{
 			@include font(24px, 400, 32px, #FFFFFF);
 			margin-bottom: 23px;
+			max-width: 100%;
 		}
 	
 		&__text{
 			@include font(12px, 700, 14px, #FFFFFF);
+			max-width: 100%;
 		}
 	}
 
@@ -768,7 +767,7 @@
 
 .footer{
 	background-color: #353C65;
-	padding: 71px 32px;
+	padding-top: 71px;
 
 	.container{
 		display: grid;
@@ -777,20 +776,14 @@
 		margin-bottom: 67px;
 	}
 
-	&__location{
-
-	}
-
-	&__contacts{
-	}
-
-	&__about{
+	&__box{
 
 	}
 
 	&__title{
 		@include font(18px, 700, 21px, #fff);
 		margin-bottom: 29px;
+		text-transform: uppercase;
 	}
 
 	&__text{
@@ -806,24 +799,25 @@
 .footer-secondary{
 	text-align: center;
 	background-color: #2C3154;
-	padding: 24px 32px;
-	position: absolute;
-	width: 100%;
-	left: 0;
+	padding: 24px 0;
 
-	&__text{
-		max-width: 370px;
-		color: #808080;
+	&__container{
+		max-width: 390px;
+		padding: 0 20px;
 		margin: 0 auto;
 	}
+
+	&__text{
+		@include font(18px, 400, 21px, #808080);
+	}
 	&__span{
-		@include font(18px, 400, 21px, #fff);
+		color: #FFFFFF;
 	}
 }
 
 @media only screen and (max-width: 1024px){
 	.footer{
-		padding: 47px 32px;
+		padding-top: 47px;
 	
 		.container{
 			gap: 20px;
@@ -849,18 +843,14 @@
 		padding: 14px 32px;
 	
 		&__text{
-			max-width: 314px;
-		}
-
-		&__span{
-			@include font(14px, 400, 16px, #fff);
+			@include font(14px, 400, 16px, #808080);
 		}
 	}
 }
 
 @media only screen and (max-width: 767px){
 	.footer{
-		padding: 71px 32px;
+		padding-top: 71px;
 	
 		.container{
 			grid-template-columns: repeat(1, 1fr);
@@ -876,17 +866,17 @@
 		&__text{
 			@include font(14px, 400, 16px, #fff);
 		}
-	
+
 		.icons-wrapper{
 			column-gap: 17px;
 		}
 	}
 	
 	.footer-secondary{
-		padding: 29px 20px;
+		padding: 29 0px;
 
-		&__span{
-			@include font(14px, 400, px, #fff);
+		&__text{
+			@include font(14px, 400, 16px, #808080);
 		}
 	}
 }
