@@ -264,10 +264,31 @@
 .about {
   margin-bottom: 140px;
 }
+@media only screen and (max-width: 1024px) {
+  .about {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about {
+    margin-bottom: 35px;
+  }
+}
 .about .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 89px 32px;
+}
+@media only screen and (max-width: 1024px) {
+  .about .container {
+    gap: 49px 20px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about .container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 42px;
+  }
 }
 .about__wrapper {
   text-align: center;
@@ -280,6 +301,20 @@
   align-items: center;
   margin: 0 auto 51px;
 }
+@media only screen and (max-width: 1024px) {
+  .about__icon-wrapper {
+    width: 85px;
+    height: 85px;
+    margin: 0 auto 43px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .about__icon-wrapper {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 21px;
+  }
+}
 .about__title {
   font-size: 24px;
   line-height: 28px;
@@ -288,25 +323,7 @@
   text-transform: uppercase;
   margin-bottom: 42px;
 }
-.about__text {
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-  color: #6C7279;
-}
-
 @media only screen and (max-width: 1024px) {
-  .about {
-    margin-bottom: 80px;
-  }
-  .about .container {
-    gap: 49px 20px;
-  }
-  .about__icon-wrapper {
-    width: 85px;
-    height: 85px;
-    margin: 0 auto 43px;
-  }
   .about__title {
     font-size: 18px;
     line-height: 21px;
@@ -314,6 +331,23 @@
     color: #2D3033;
     margin-bottom: 24px;
   }
+}
+@media only screen and (max-width: 767px) {
+  .about__title {
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 900;
+    color: #2D3033;
+    margin-bottom: 9px;
+  }
+}
+.about__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #6C7279;
+}
+@media only screen and (max-width: 1024px) {
   .about__text {
     font-size: 14px;
     line-height: 16px;
@@ -322,25 +356,6 @@
   }
 }
 @media only screen and (max-width: 767px) {
-  .about {
-    margin-bottom: 35px;
-  }
-  .about .container {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 42px;
-  }
-  .about__icon-wrapper {
-    width: 76px;
-    height: 76px;
-    margin: 0 auto 21px;
-  }
-  .about__title {
-    font-size: 18px;
-    line-height: 21px;
-    font-weight: 900;
-    color: #2D3033;
-    margin-bottom: 9px;
-  }
   .about__text {
     font-size: 14px;
     line-height: 16px;
@@ -348,6 +363,7 @@
     color: #6C7279;
   }
 }
+
 @keyframes text-pop-up-top {
   0% {
     transform: translateY(0);

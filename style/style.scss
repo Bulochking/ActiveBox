@@ -255,10 +255,27 @@
 .about{
 	margin-bottom: 140px;
 
+	@media only screen and (max-width: 1024px){
+		margin-bottom: 80px;
+	}
+
+	@media only screen and (max-width: 767px){
+		margin-bottom: 35px;
+	}
+
 	.container{
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 89px 32px;
+
+		@media only screen and (max-width: 1024px){
+			gap: 49px 20px;
+		}
+
+		@media only screen and (max-width: 767px){
+			grid-template-columns: repeat(1, 1fr);
+			gap: 42px;
+		}
 	}
 
 	&__wrapper{
@@ -272,70 +289,48 @@
 		justify-content: center;
 		align-items: center;
 		margin: 0 auto 51px;
+
+		@media only screen and (max-width: 1024px){
+			width: 85px;
+			height: 85px;
+			margin: 0 auto 43px;
+		}
+
+		@media only screen and (max-width: 767px){
+			width: 76px;
+			height: 76px;
+			margin: 0 auto 21px;
+		}
 	}
 
 	&__title{
 		@include font(24px, 900, 28px, #2D3033);
 		text-transform: uppercase;
 		margin-bottom: 42px;
+
+		@media only screen and (max-width: 1024px){
+			@include font(18px, 900, 21px, #2D3033);
+			margin-bottom: 24px;
+		}
+
+		@media only screen and (max-width: 767px){
+			@include font(18px, 900, 21px, #2D3033);
+			margin-bottom: 9px;
+		}
 	}
 
 	&__text{
 		@include font(18px, 400, 21px, #6C7279);
-	}
-}
 
-@media only screen and (max-width: 1024px){
-	.about{
-		margin-bottom: 80px;
-	
-		.container{
-			gap: 49px 20px;
+		@media only screen and (max-width: 1024px){
+			@include font(14px, 400, 16px, #6C7279);	
 		}
-	
-		&__icon-wrapper{
-			width: 85px;
-			height: 85px;
-			margin: 0 auto 43px;	
-		}
-	
-		&__title{
-			@include font(18px, 900, 21px, #2D3033);
-			margin-bottom: 24px;
-		}
-	
-		&__text{
+
+		@media only screen and (max-width: 767px){
 			@include font(14px, 400, 16px, #6C7279);
 		}
 	}
 }
-
-@media only screen and (max-width: 767px){
-	.about{
-		margin-bottom: 35px;
-	
-		.container{
-			grid-template-columns: repeat(1, 1fr);
-			gap: 42px;
-		}
-	
-		&__icon-wrapper{
-			width: 76px;
-			height: 76px;
-			margin: 0 auto 21px;
-		}
-	
-		&__title{
-			@include font(18px, 900, 21px, #2D3033);
-			margin-bottom: 9px;
-		}
-	
-		&__text{
-			@include font(14px, 400, 16px, #6C7279);
-		}
-	}
-}
-
 
 // -------------------------------------------
 
