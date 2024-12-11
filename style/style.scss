@@ -551,6 +551,10 @@
 .slider{
 	margin-bottom: 122px;
 
+	@media only screen and (max-width: 1024px){
+		margin-bottom: 78px;
+	}
+
 	&__container{
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -577,6 +581,10 @@
 		justify-content: center;
 		flex-direction: column;
 		padding: 30px 30px 30px 128px;
+
+		@media only screen and (max-width: 1024px){	
+			padding: 30px 30px 30px 83px;
+		}
 	}
 
 	&__title{
@@ -585,13 +593,24 @@
 		font-style: italic;
 		margin-bottom: 24px;
 		max-width: 471px;
-		text-transform: capitalize
+		text-transform: capitalize;
+
+		@media only screen and (max-width: 1024px){	
+			@include font(24px, 400, 32px, #FFFFFF);
+			margin-bottom: 14px;
+			max-width: 330px;
+		}
 	}
 
 	&__text{
 		@include font(13px, 700, 15px, #FFFFFF);
 		max-width: 471px;
 		text-transform: uppercase;
+
+		@media only screen and (max-width: 1024px){	
+			@include font(12px, 700, 14px, #FFFFFF);
+			max-width: 330px;
+		}
 	}
 }
 
@@ -620,6 +639,11 @@
 	background-color: transparent;
 	opacity: 1;
 	margin: 0;
+
+	@media only screen and (max-width: 1024px){	
+		width: 9px;
+		height: 9px;
+	}
 }
 
 .swiper-pagination-bullet-active{
@@ -635,30 +659,7 @@
 	margin: 0;
 }
 
-@media only screen and (max-width: 1024px){
-	.slider{
-		margin-bottom: 78px;
-	
-		&__wrapper-text{
-			padding: 30px 30px 30px 83px;
-		}
-	
-		&__title{
-			@include font(24px, 400, 32px, #FFFFFF);
-			margin-bottom: 14px;
-			max-width: 330px;
-		}
-	
-		&__text{
-			@include font(12px, 700, 14px, #FFFFFF);
-			max-width: 330px;
-		}
-	}
-	.swiper-pagination-bullet{
-		width: 9px;
-		height: 9px;
-	}
-}
+
 
 @media only screen and (max-width: 767px){
 	.slider{
@@ -697,53 +698,49 @@
 // ---------------------------------------------
 
 .download{
-	margin-bottom: 114px
-}
-
-.container{
-	text-align: center;
-}
-
-.download__title{
-	@include font(30px, 500, 35px, #000);
-	text-transform: capitalize;
-	margin: 0 auto 22px;
-}
-
-.download__text{
-	@include font(18px, 700, 21px, #000);
-	text-transform: uppercase;
-	margin: 0 auto 48px;
-}
-
-@media only screen and (max-width: 1024px){
-	.download{
+	margin-bottom: 114px;
+	
+	@media only screen and (max-width: 1024px){
 		margin-bottom: 78px
 	}
 
-	.download__title{
-		@include font(24px, 500, 28px, #000);
-		margin: 0 auto 21px;
-	}
-
-	.download__text{
-		@include font(14px, 700, 16px, #000);
-		margin: 0 auto 43px;
-	}
-}
-
-@media only screen and (max-width: 767px){
-	.download{
+	@media only screen and (max-width: 767px){
 		margin-bottom: 45px
 	}
-	
-	.download__title{
-		@include font(18px, 500, 21px, #000);
+
+	.container{
+		text-align: center;
 	}
-	
-	.download__text{
-		@include font(13px, 700, 15px, #000);
-		margin: 0 auto 11px;
+
+	&__title{
+		@include font(30px, 500, 35px, #000);
+		text-transform: capitalize;
+		margin: 0 auto 22px;
+
+		@media only screen and (max-width: 1024px){
+			@include font(24px, 500, 28px, #000);
+			margin: 0 auto 21px;
+		}
+
+		@media only screen and (max-width: 767px){
+			@include font(18px, 500, 21px, #000);
+		}	
+	}
+
+	&__text{
+		@include font(18px, 700, 21px, #000);
+		text-transform: uppercase;
+		margin: 0 auto 48px;
+
+		@media only screen and (max-width: 1024px){
+			@include font(14px, 700, 16px, #000);
+			margin: 0 auto 43px;
+		}
+
+		@media only screen and (max-width: 767px){	
+			@include font(13px, 700, 15px, #000);
+			margin: 0 auto 11px;
+		}
 	}
 }
 
