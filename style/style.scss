@@ -23,8 +23,38 @@
 .icon{
 }
 
+.btn{
+	@include font(24px, 900, 28px, #fff);
+	border: none;
+	background-color: #FF4343;
+	font-family: "Open Sans", serif;
+	max-width: 370px;
+	width: 100%;
+	padding: 25px 10px;
+	text-transform: uppercase;
+	transition: all .3s linear;
+	cursor: pointer;
+
+	&:hover{
+		background-color: #E71414;	
+	}
+
+	&:active{
+		box-shadow: 4px 4px 30px #FF4343;
+	}
+
+	@media only screen and (max-width: 767px){
+		padding: 15px 10px;
+		max-width: 100%;
+	}
+}
+
 .text{
 	@include font(18px, 400, 21px, #6C7279);
+
+	@media only screen and (max-width: 1024px){		
+		@include font(14px, 400, 16px, #6C7279);
+	}
 }
 
 .icons-wrapper{
@@ -32,6 +62,15 @@
 	align-items: center;
 	margin-top: 38px;
 	column-gap: 5px;
+
+	@media only screen and (max-width: 1024px){		
+		margin-top: 39px;
+	}
+
+	@media only screen and (max-width: 767px){	
+		margin-top: 57px;
+		column-gap: 5px;
+	}
 }
 
 .icon-wrapper{
@@ -55,6 +94,16 @@
 	&:active{
 		background-color: #B90C0C;
 		border-color: #B90C0C;
+	}
+
+	@media only screen and (max-width: 1024px){			
+		width: 33px;
+		height: 33px;	
+	}
+
+	@media only screen and (max-width: 767px){	
+		width: 40px;
+		height: 40px;
 	}
 }	
 
@@ -183,8 +232,6 @@
 		display: none;
 	}
 
-
-
 	&__items{
 		display: flex;
 		justify-content: center;
@@ -221,32 +268,6 @@
 		@media only screen and (max-width: 1024px){
 			@include font(12px, 700, 14px, #fff);
 		}
-	}
-}
-
-.btn{
-	@include font(24px, 900, 28px, #fff);
-	border: none;
-	background-color: #FF4343;
-	font-family: "Open Sans", serif;
-	max-width: 370px;
-	width: 100%;
-	padding: 25px 10px;
-	text-transform: uppercase;
-	transition: all .3s linear;
-	cursor: pointer;
-
-	&:hover{
-		background-color: #E71414;	
-	}
-
-	&:active{
-		box-shadow: 4px 4px 30px #FF4343;
-	}
-
-	@media only screen and (max-width: 767px){
-		padding: 15px 10px;
-		max-width: 100%;
 	}
 }
 
@@ -347,6 +368,16 @@
 }
 
 .design{
+
+	@media only screen and (max-width: 1024px){
+		margin-bottom: 78px;
+	}
+
+	@media only screen and (max-width: 767px){
+		grid-template-columns: repeat(2, 1fr);
+		margin-bottom: 35px;
+	}
+
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	margin-bottom: 114px;
@@ -396,39 +427,26 @@
 		@include font(24px, 900, 28px, #fff);
 		margin-bottom: 47px;
 		text-transform: uppercase;
+
+		@media only screen and (max-width: 1024px){
+			@include font(18px, 900, 21px, #fff);
+			margin-bottom: 23px;
+		}
+
+		@media only screen and (max-width: 767px){
+			@include font(18px, 900, 21px, #fff);
+			margin-bottom: 2px;
+		}
 	}
 
 	&__text{
 		@include font(18px, 400, 21px, #fff);
-	}
-}
 
-@media only screen and (max-width: 1024px){
-	.design{
-		margin-bottom: 78px;
-	
-		&__title{
-			@include font(18px, 900, 21px, #fff);
-			margin-bottom: 23px;
-		}
-	
-		&__text{
+		@media only screen and (max-width: 1024px){
 			@include font(14px, 400, 16px, #fff);
 		}
-	}
-}
 
-@media only screen and (max-width: 767px){
-	.design{
-		grid-template-columns: repeat(2, 1fr);
-		margin-bottom: 35px;
-	
-		&__title{
-			@include font(18px, 900, 21px, #fff);
-			margin-bottom: 2px;
-		}
-	
-		&__text{
+		@media only screen and (max-width: 767px){
 			@include font(14px, 400, 16px, #fff);
 		}
 	}
@@ -439,10 +457,27 @@
 .rewiews{
 	margin-bottom: 124px;
 
+	@media only screen and (max-width: 1024px){
+		margin-bottom: 78px;
+	}
+
+	@media only screen and (max-width: 767px){
+		margin-bottom: 41px;
+	}
+
 	.container{
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 30px;
+
+		@media only screen and (max-width: 1024px){
+			gap: 26px;
+		}
+
+		@media only screen and (max-width: 767px){	
+			grid-template-columns: repeat(1, 1fr);
+			gap: 49px;
+		}
 	}
 
 	&__wrapper{
@@ -453,6 +488,14 @@
 		padding-top: 100%;
 		position: relative;
 		margin-bottom: 30px;
+
+		@media only screen and (max-width: 1024px){	
+			margin-bottom: 25px;
+		}
+
+		@media only screen and (max-width: 767px){	
+			margin-bottom: 25px;
+		}
 	}
 
 	&__image{
@@ -466,12 +509,31 @@
 	&__title{
 		@include font(24px, 700, 28px, #000);
 		margin-bottom: 7px;
+
+		@media only screen and (max-width: 1024px){	
+			@include font(18px, 700, 21px, #000);
+			margin-bottom: 7px;
+		}
+
+		@media only screen and (max-width: 767px){	
+			@include font(18px, 700, 21px, #000);
+		}		
 	}
 
 	&__description{
 		@include font(18px, 400, 21px, #FF4343);
 		margin-bottom: 18px;
 		text-transform: uppercase;
+
+		@media only screen and (max-width: 1024px){		
+			@include font(14px, 400, 16px, #FF4343);
+			margin-bottom: 22px;
+		}
+
+		@media only screen and (max-width: 767px){	
+			@include font(14px, 400, 16px, #FF4343);
+			margin-bottom: 37px;
+		}
 	}
 }
 
@@ -481,78 +543,6 @@
 	}
 	100% {
 		transform: translateY(4px);
-	}
-}
-
-
-@media only screen and (max-width: 1024px){
-	.rewiews{
-		margin-bottom: 78px;
-	
-		.container{
-			gap: 26px;
-		}
-	
-		&__wrapper-image{
-			margin-bottom: 25px;
-		}
-	
-		&__title{
-			@include font(18px, 700, 21px, #000);
-			margin-bottom: 7px;
-		}
-	
-		&__description{
-			@include font(14px, 400, 16px, #FF4343);
-			margin-bottom: 22px;
-		}	
-	}
-
-	.text{
-		@include font(14px, 400, 16px, #6C7279);
-	}
-
-	.icons-wrapper{
-		margin-top: 39px;
-	}
-	
-	.icon-wrapper{
-		width: 33px;
-		height: 33px;	
-	}
-}
-
-@media only screen and (max-width: 767px){
-	.rewiews{
-		margin-bottom: 41px;
-	
-		.container{
-			grid-template-columns: repeat(1, 1fr);
-			gap: 49px;
-		}
-	
-		&__wrapper-image{
-			margin-bottom: 25px;
-		}
-	
-		&__title{
-			@include font(18px, 700, 21px, #000);
-		}
-	
-		&__description{
-			@include font(14px, 400, 16px, #FF4343);
-			margin-bottom: 37px;
-		}
-	}
-
-	.icons-wrapper{
-		margin-top: 57px;
-		column-gap: 5px;
-	}
-	
-	.icon-wrapper{
-		width: 40px;
-		height: 40px;
 	}
 }
 
