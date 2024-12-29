@@ -114,6 +114,9 @@
 	z-index: 1;
 	width: 100%;
 	
+	@media only screen and (max-width: 767px){
+		padding: 0 21px;
+	}
 
 	&__container{
 		display: flex;
@@ -123,7 +126,7 @@
 
 		@media only screen and (max-width: 767px){
 			border-bottom: none;
-			padding: 21px;
+			padding: 21px 0;
 		}
 	}
 
@@ -787,6 +790,10 @@
 		max-width: 390px;
 		padding: 0 20px;
 		margin: 0 auto;
+
+		@media only screen and (max-width: 767px){
+			max-width: 100%;
+		}	
 	}
 
 	&__text{
@@ -797,7 +804,7 @@
 	}
 }
 
-@media only screen and (max-width: 1024px){
+
 	.footer{
 		padding-top: 47px;
 
@@ -848,7 +855,7 @@
 		padding: 14px 32px;
 
 		@media only screen and (max-width: 767px){	
-			padding: 29 0px;
+			padding: 29px 0px;
 		}	
 	
 		&__text{
@@ -859,5 +866,4 @@
 			@include font(14px, 400, 16px, #808080);
 		}	
 	}
-}
 
