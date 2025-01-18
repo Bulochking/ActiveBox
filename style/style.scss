@@ -183,7 +183,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			margin-left: 20px;
+			
 			margin-top: 108px;
 			z-index: 2;
 		}
@@ -193,7 +193,8 @@
 	&__menu-item {
 		margin-bottom: 20px;
 		list-style-type: none;
-		text-align: left
+		text-align: left;
+		margin-left: 20px;
 	}
 
 	&__menu-link {

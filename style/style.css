@@ -178,7 +178,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  margin-left: 20px;
   margin-top: 108px;
   z-index: 2;
 }
@@ -186,6 +185,7 @@
   margin-bottom: 20px;
   list-style-type: none;
   text-align: left;
+  margin-left: 20px;
 }
 .header__menu-link {
   font-size: 13px;
