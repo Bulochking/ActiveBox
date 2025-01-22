@@ -133,7 +133,7 @@
 @media only screen and (max-width: 767px) {
   .header__container {
     border-bottom: none;
-    padding: 21px 0;
+    padding: 0;
   }
 }
 .header__open-menu {
@@ -170,15 +170,12 @@
   }
 }
 .header__menu {
-  display: none;
-}
-.header__menu.menu-open {
   display: block;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 100%;
+  left: -100%;
   width: 100%;
-  margin-top: 108px;
+  padding: 50px 0;
   z-index: 2;
 }
 .header__menu-item {
@@ -200,6 +197,14 @@
   color: #FF4343;
 }
 
+.menu-open > .container {
+  opacity: 0;
+}
+.menu-open .header__menu {
+  left: 0;
+  transition: left 0.3s linear 0.2s;
+}
+
 .banner {
   padding: 230px 0 120px;
   position: relative;
@@ -219,7 +224,7 @@
     margin-bottom: 40px;
   }
 }
-.banner.container {
+.banner > .container {
   z-index: 1;
   position: relative;
 }

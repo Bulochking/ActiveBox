@@ -1,9 +1,8 @@
+const banner = document.querySelector(".banner");
 const menuButton = document.querySelector(".header__open-menu");
-const menu = document.querySelector(".header__menu");
 
 function toggleMenu() {
-    menu.classList.toggle("menu-open"); 
-    menuButton.classList.toggle("active");	
+    banner.classList.toggle("menu-open"); 	
 }
 
 menuButton.addEventListener("click", toggleMenu);
