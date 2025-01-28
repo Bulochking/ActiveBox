@@ -193,11 +193,10 @@
 		position: absolute;
 		top: 100%;
 		left: -100%;
-		width: 100%;
+		width: 100%;	
 		padding: 50px 0;
 		z-index: 2;
 		transition: left .3s linear;
-
 	}
 
 	&__menu-item {
@@ -460,7 +459,6 @@
 }
 
 .design{
-
 	@media only screen and (max-width: 1024px){
 		margin-bottom: 78px;
 	}
