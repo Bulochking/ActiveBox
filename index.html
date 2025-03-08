@@ -14,7 +14,7 @@
 		href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 		/>
 	<link rel="stylesheet" href="style/style.css">		
-	<title>NePain3</title>
+	<title>ActiveBox</title>
 </head>
 <body>
 
@@ -34,8 +34,8 @@
 						<path d="M123.454 25.7472V0.706514H129.978C132.647 0.706514 134.663 1.25686 136.026 2.35755C137.4 3.44677 138.087 5.03474 138.087 7.12147C138.087 8.63491 137.707 9.89039 136.946 10.8879C136.185 11.8854 135.112 12.5217 133.726 12.7969C135.294 13.0033 136.6 13.6912 137.644 14.8607C138.689 16.0187 139.212 17.3487 139.212 18.8507C139.212 20.9833 138.525 22.6687 137.15 23.907C135.788 25.1338 133.885 25.7472 131.443 25.7472H123.454ZM124.374 13.3816V24.8185H131.546C133.647 24.8185 135.294 24.2968 136.486 23.2534C137.69 22.1986 138.292 20.7425 138.292 18.8851C138.292 17.3028 137.713 16.0015 136.554 14.9811C135.396 13.9492 133.846 13.416 131.903 13.3816H124.374ZM124.374 12.4529H130.319C132.579 12.4529 134.283 12.0172 135.43 11.1459C136.577 10.263 137.15 8.89862 137.15 7.05267C137.15 3.49837 134.828 1.69255 130.183 1.63522H124.374V12.4529Z" fill="white"/>
 						<path d="M162.074 15.1015C162.074 17.2684 161.688 19.1889 160.915 20.8629C160.154 22.5254 159.064 23.8152 157.644 24.7325C156.225 25.6383 154.589 26.0912 152.738 26.0912C149.944 26.0912 147.684 25.0879 145.958 23.0815C144.232 21.075 143.368 18.3691 143.368 14.9639V11.3522C143.368 9.19672 143.749 7.28198 144.51 5.60802C145.282 3.93405 146.378 2.64419 147.798 1.73841C149.229 0.821169 150.864 0.362549 152.704 0.362549C154.555 0.362549 156.191 0.821169 157.61 1.73841C159.041 2.64419 160.143 3.93979 160.915 5.62522C161.688 7.29918 162.074 9.20819 162.074 11.3522V15.1015ZM161.154 11.3178C161.154 8.29095 160.393 5.86599 158.871 4.04298C157.349 2.2085 155.293 1.29126 152.704 1.29126C150.149 1.29126 148.11 2.20276 146.588 4.02578C145.066 5.83733 144.305 8.30815 144.305 11.4382V15.1015C144.305 17.0965 144.646 18.8621 145.328 20.3985C146.02 21.9234 147.003 23.0987 148.275 23.9242C149.547 24.7497 151.035 25.1624 152.738 25.1624C155.328 25.1624 157.377 24.2509 158.888 22.4279C160.398 20.6049 161.154 18.1169 161.154 14.9639V11.3178Z" fill="white"/>
 						<path d="M174.373 12.2465L182.38 0.706514H183.539L174.953 12.9689L183.862 25.7472H182.721L174.373 13.6912L165.992 25.7472H164.885L173.794 12.9689L165.208 0.706514H166.367L174.373 12.2465Z" fill="white"/>
-						</svg>						
-					</a>
+					</svg>						
+				</a>
 				<nav class="nav">
 					<ul class="nav__items">
 							<li class="nav__item"><a class="nav__link" href="#">Features</a></li>
@@ -46,10 +46,31 @@
 					</ul>
 				</nav>
 				<button class="header__open-menu">
-					<svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0 0H24V3H0V0ZM0 7.5H24V10.5H0V7.5ZM0 15H24V18H0V15Z" fill="white"/>
-						</svg>						
+					<svg class="svg" width="24" height="24" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path class="line line1" d="M0 0H24V3H0V0Z" fill="white"/>
+						<path class="line line2" d="M0 7.5H24V10.5H0V7.5Z" fill="white"/>
+						<path class="line line3" d="M0 15H24V18H0V15Z" fill="white"/>
+					</svg>
 				</button>
+				<div class="header__menu">
+					<ul class="header__menu-list">
+						<li class="header__menu-item">
+							<a class="header__menu-link" href="#">features</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link" href="#">works</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link" href="#">our team</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link" href="#">testimonials</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link" href="#">download</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 		<div class="container">
@@ -118,7 +139,7 @@
 						<path d="M39.0497 54.6131C38.7795 54.6219 38.5105 54.5739 38.2595 54.4721C38.0085 54.3703 37.781 54.2169 37.5914 54.0216L20.9247 37.1235C20.7294 36.9271 20.5744 36.6935 20.4687 36.4361C20.3629 36.1787 20.3084 35.9026 20.3084 35.6238C20.3084 35.3449 20.3629 35.0688 20.4687 34.8114C20.5744 34.554 20.7294 34.3204 20.9247 34.1241C21.3211 33.7343 21.8517 33.5164 22.4039 33.5164C22.956 33.5164 23.4866 33.7343 23.883 34.1241L39.0497 49.5436L73.008 15.1136C73.4003 14.7159 73.9324 14.4924 74.4872 14.4924C75.042 14.4924 75.5741 14.7159 75.9664 15.1136C76.3587 15.5114 76.5791 16.0508 76.5791 16.6133C76.5791 17.1758 76.3587 17.7153 75.9664 18.1131L40.5497 54.0216C40.3508 54.2161 40.1158 54.3686 39.8583 54.4701C39.6008 54.5717 39.3259 54.6203 39.0497 54.6131Z" fill="#FF4343"/>
 						</svg>									
 				</div>
-				<h3 class="about__title">Ready to Ship</h3>
+				<h3 class="about_f_title">Ready to Ship</h3>
 				<p class="about__text">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla.</p>
 			</div>
 			<div class="about__wrapper">
@@ -413,7 +434,7 @@
 	</footer>
 
 	<!-- ---------------------------------------------- -->
-	
+	<script src="/style/script.js"></script>	
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script>
 		const swiper = new Swiper('.swiper', {
@@ -424,6 +445,13 @@
 					clickable: true
 				},	
 			});
+			const myElement = document.querySelectorAll('someClass')[0]
+
+myElement.onclick = function () {
+	if(!menu.classList.contains(header__open-memu)){
+
+	}
+}
 	</script>
 
 </body>

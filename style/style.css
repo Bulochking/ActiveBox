@@ -9,6 +9,8 @@
   max-width: 1202px;
   padding: 0 16px;
   margin: 0 auto;
+  opacity: 100%;
+  transition: opacity 0.3s linear 0.1s;
 }
 
 .btn {
@@ -108,6 +110,10 @@
   }
 }
 
+.line {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .header {
   position: absolute;
   left: 0;
@@ -129,15 +135,24 @@
 @media only screen and (max-width: 767px) {
   .header__container {
     border-bottom: none;
-    padding: 21px 0;
+    padding: 0;
   }
 }
 .header__open-menu {
   display: none;
 }
+.header__open-menu:hover {
+  transform: scale(0.99);
+  transition: all 0 0.5s linear;
+  cursor: pointer;
+}
+.header__open-menu:active {
+  transform: scale(0.95);
+  transition: all 0.1s linear;
+}
 @media only screen and (max-width: 767px) {
   .header__open-menu {
-    display: block;
+    display: flex;
     width: 55px;
     height: 55px;
     display: flex;
@@ -147,6 +162,51 @@
     border: none;
   }
 }
+.header .header__open-menu.active .line1 {
+  transform: translate(4.5px, -0.4px) rotate(45deg);
+}
+.header .header__open-menu.active .line2 {
+  opacity: 0;
+}
+.header .header__open-menu.active .line3 {
+  transform: translate(-7.7px, 6px) rotate(-45deg);
+}
+.header__menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: -100%;
+  width: 100%;
+  padding: 50px 0;
+  z-index: 2;
+  transition: left 0.3s linear;
+}
+.header__menu-item {
+  margin-bottom: 20px;
+  list-style-type: none;
+  text-align: left;
+  margin-left: 20px;
+}
+.header__menu-link {
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.header__menu-link:hover {
+  color: #FF4343;
+}
+
+.menu-open > .container {
+  opacity: 0;
+  transition: opacity 0.3s linear 0.1s;
+}
+.menu-open .header__menu {
+  left: 0;
+}
 
 .banner {
   padding: 230px 0 120px;
@@ -154,6 +214,8 @@
   background: url(../media/ActiveBox-banner-img.png) center/cover no-repeat;
   text-align: center;
   margin-bottom: 109px;
+  opacity: 100%;
+  transition: opacity 0.3s linear;
 }
 @media only screen and (max-width: 1024px) {
   .banner {
@@ -167,7 +229,7 @@
     margin-bottom: 40px;
   }
 }
-.banner .container {
+.banner > .container {
   z-index: 1;
   position: relative;
 }
